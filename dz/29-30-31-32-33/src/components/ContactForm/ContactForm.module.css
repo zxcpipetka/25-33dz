@@ -1,0 +1,11 @@
+.form { display: flex; flex-direction: column; margin-top: 23px; }
+.label { margin: 0 0 7px; color: #55584f; font-size: 10px; font-weight: 700; }
+.inputWrap { display: flex; height: 43px; align-items: center; gap: 9px; margin-bottom: 16px; padding: 0 11px; border: 1px solid #e2e3dc; border-radius: 5px; background: #fbfcf8; color: #87946e; transition: border-color 150ms ease, box-shadow 150ms ease; }
+.inputWrap:focus-within { border-color: #95a96a; box-shadow: 0 0 0 3px rgba(149, 169, 106, 0.12); }
+.inputWrap svg { flex: 0 0 auto; }
+.inputWrap input { width: 100%; min-width: 0; border: 0; outline: 0; background: transparent; color: #292b25; font-size: 11px; }
+.inputWrap input::placeholder { color: #a0a297; }
+.error { margin: -5px 0 12px; color: #a94f3c; font-size: 10px; line-height: 1.5; }
+.submit { display: inline-flex; min-height: 42px; align-items: center; justify-content: center; gap: 8px; margin-top: 2px; border: 0; border-radius: 5px; background: #789447; color: #fff; cursor: pointer; font-size: 11px; font-weight: 800; transition: background 150ms ease, transform 150ms ease; }
+.submit:hover { transform: translateY(-1px); background: #657f39; }
+.submit:focus-visible { outline: 3px solid #c8d7a8; outline-offset: 2px; }

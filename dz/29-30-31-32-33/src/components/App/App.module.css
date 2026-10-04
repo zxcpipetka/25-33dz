@@ -1,0 +1,58 @@
+.page { min-height: 100vh; }
+.topbar { display: flex; min-height: 72px; align-items: center; justify-content: space-between; gap: 20px; padding: 0 max(5vw, calc((100vw - 1240px) / 2)); border-bottom: 1px solid #dedfd8; background: rgba(250, 250, 246, 0.9); }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: #23251f; font-size: 19px; font-weight: 800; letter-spacing: -0.7px; }
+.brandIcon { display: grid; width: 33px; height: 33px; place-items: center; border-radius: 9px; background: #d8ed8f; color: #303d1c; }
+.brandDot { color: #799744; }
+.topNote,.topCount,.eyebrow,.step,.asideCaption,.asideNumber,.privacyNote,.footer { font-family: 'DM Mono', monospace; }
+.topNote { display: inline-flex; align-items: center; gap: 8px; color: #73776d; font-size: 9px; letter-spacing: 0.55px; }
+.statusDot { width: 6px; height: 6px; border-radius: 50%; background: #8cae4b; }
+.topCount { color: #73776d; font-size: 9px; letter-spacing: 0.4px; }
+.main { width: min(1120px, calc(100% - 64px)); margin: 0 auto; }
+.intro { position: relative; display: flex; min-height: 290px; align-items: center; justify-content: space-between; overflow: hidden; padding: 45px 5.5%; border-bottom: 1px solid #dedfd8; }
+.intro::after { position: absolute; top: -150px; right: 5%; width: 410px; height: 410px; border: 1px solid rgba(115, 133, 79, 0.16); border-radius: 50%; content: ''; }
+.introText { position: relative; z-index: 1; }
+.eyebrow { display: inline-flex; align-items: center; gap: 7px; margin: 0 0 18px; color: #66813b; font-size: 9px; letter-spacing: 0.6px; }
+.intro h1 { margin: 0; color: #252821; font-size: clamp(39px, 5.1vw, 61px); font-weight: 600; letter-spacing: -2.5px; line-height: 1.04; }
+.intro h1 em { color: #77934b; font-style: normal; }
+.lead { max-width: 430px; margin: 16px 0 0; color: #73766d; font-size: 13px; line-height: 1.75; }
+.introAside { position: relative; z-index: 1; display: flex; width: 110px; height: 145px; flex-direction: column; align-items: flex-start; justify-content: center; margin-right: 7%; padding-left: 19px; border-left: 1px solid #c8cbbd; color: #65764a; }
+.asideNumber { margin-bottom: 11px; font-size: 10px; }
+.asideRule { width: 34px; height: 1px; margin-bottom: 12px; background: #a8b88a; }
+.asideCaption { color: #70756a; font-size: 8px; line-height: 1.7; letter-spacing: 0.7px; }
+.asideIcon { position: absolute; top: 4px; right: -30px; color: #849766; }
+.workspace { display: grid; grid-template-columns: minmax(270px, 0.76fr) minmax(0, 1.55fr); gap: 56px; padding: 39px 5.5% 45px; }
+.formPanel { align-self: start; padding: 20px; border: 1px solid #e1e2db; border-radius: 8px; background: #fffefa; box-shadow: 0 8px 24px rgba(44, 48, 35, 0.035); }
+.panelHeading,.listHeader { display: flex; align-items: center; justify-content: space-between; }
+.step { margin: 0; color: #85877f; font-size: 9px; letter-spacing: 0.5px; }
+.headingMark { color: #8ba859; font-size: 22px; font-weight: 300; }
+.formPanel h2,.listHeader h2 { margin: 17px 0 5px; color: #292b25; font-size: 20px; font-weight: 700; letter-spacing: -0.6px; }
+.formIntro { margin: 0; color: #81837a; font-size: 11px; line-height: 1.6; }
+.privacyNote { display: flex; align-items: center; gap: 7px; margin: 18px 0 0; color: #92948d; font-size: 8px; }
+.privacyNote span { width: 5px; height: 5px; border-radius: 50%; background: #a8bf78; }
+.listPanel { min-width: 0; }
+.listHeader { margin-bottom: 19px; }
+.listHeader h2 { display: flex; align-items: baseline; gap: 9px; margin-top: 8px; font-size: 24px; }
+.listHeader h2 span { color: #999b91; font: 10px 'DM Mono', monospace; }
+.listIcon { display: grid; width: 35px; height: 35px; place-items: center; border: 1px solid #daddd2; border-radius: 50%; color: #758c4f; }
+.footer { display: flex; justify-content: space-between; gap: 15px; padding: 18px 5.5%; border-top: 1px solid #dedfd8; color: #8a8d82; font-size: 8px; letter-spacing: 0.45px; }
+.footerMark { padding-left: 5px; color: #77934b; font-size: 12px; }
+@media (max-width: 760px) {
+  .topbar { min-height: 64px; padding: 0 22px; }
+  .topNote { display: none; }
+  .main { width: min(100% - 36px, 600px); }
+  .intro { min-height: 260px; padding: 38px 10px; }
+  .introAside { margin-right: 6%; transform: scale(0.88); }
+  .workspace { grid-template-columns: 1fr; gap: 34px; padding: 28px 10px 35px; }
+}
+@media (max-width: 480px) {
+  .topbar { padding: 0 18px; }
+  .topCount { font-size: 8px; }
+  .main { width: calc(100% - 28px); }
+  .intro { min-height: 255px; }
+  .intro h1 { font-size: 40px; letter-spacing: -1.8px; }
+  .lead { max-width: 290px; font-size: 12px; }
+  .introAside { width: 55px; margin-right: 5px; padding-left: 11px; opacity: 0.7; }
+  .asideIcon { right: -12px; width: 18px; }
+  .workspace { padding-right: 2px; padding-left: 2px; }
+  .footer { flex-direction: column; font-size: 7px; }
+}
